@@ -1,0 +1,8 @@
+.vscode/
+
+desktop.ini
+
+*.pyc
+
+/temp/
+/build/

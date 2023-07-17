@@ -7,8 +7,7 @@ import random
 import xlrd
 import datetime
 
-token = "NzU0ODYxNDEwNjA5MTM1NzE3.X165eA.9UsgA7ukZR91zGUT8FnUD3QfleQ"
-
+token = "insert token here"
 client = Bot(command_prefix="?")
 
 @client.event
@@ -43,7 +42,7 @@ async def on_message(message):
 @client.command(name='day', help='get important details about today')
 async def day(ctx, month:int=None, day:int=None):
 
-    book = xlrd.open_workbook("CALENDAR ABCD DAYS 2 (3) (1) (1) - Copy.xls")
+    book = xlrd.open_workbook("calendars/CALENDAR ABCD DAYS 2 (3) (1) (1) - Copy.xls")
     sh = book.sheet_by_index(0)
 
     
@@ -137,7 +136,7 @@ async def day(ctx, month:int=None, day:int=None):
 @client.command(name='week', help='get information about the upcoming or present week')
 async def week(ctx, month:int=None, day:int=None):
 
-    book = xlrd.open_workbook("CALENDAR ABCD DAYS 2 (3) (1) (1) - Copy.xls")
+    book = xlrd.open_workbook("calendars/CALENDAR ABCD DAYS 2 (3) (1) (1) - Copy.xls")
     sh = book.sheet_by_index(0)
 
     current_time = datetime.datetime.now()
